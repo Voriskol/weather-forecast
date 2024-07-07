@@ -11,17 +11,17 @@
           />
           <h2 class="temperature">14°C</h2>
           <div class="weather-description">
-            <img class="weather-description__icon" src="@/assets/img/weather.svg" alt="" />
+            <img class="weather-description__icon icon" src="@/assets/img/weather.svg" alt="" />
             <span>Thunderstorm</span>
           </div>
         </div>
         <div class="city-date">
           <div class="city">
-            <img class="city__icon" src="@/assets/img/location.svg" alt="city icon" />
+            <img class="city__icon icon" src="@/assets/img/location.svg" alt="city icon" />
             <p>Paris, FR</p>
           </div>
           <div class="date">
-            <img class="date__icon" src="@/assets/img/calendar.svg" alt="date icon" />
+            <img class="date__icon icon" src="@/assets/img/calendar.svg" alt="date icon" />
             <p>Thu, March 16, 2023</p>
           </div>
         </div>
@@ -33,7 +33,7 @@
             <div class="highlights-item__main">
               <p class="highlights-item__main-text">Wind</p>
               <img
-                class="highlights-item__main-icon"
+                class="highlights-item__main-icon icon"
                 src="@/assets/img/equalizer (2).png"
                 alt="wind"
               />
@@ -47,7 +47,7 @@
               <div class="highlights-item__sub-text-wrapper">
                 <p class="highlights-item__sub-text">14 m/s</p>
                 <div class="highlights-item__sub-text-sub-wrapper">
-                  <img src="@/assets/img/gusts.svg" alt="gusts" />
+                  <img src="@/assets/img/gusts.svg" alt="gusts" class="icon" />
                   <p class="highlights-item__sub-text__gray">Learn more about gusts</p>
                 </div>
               </div>
@@ -57,7 +57,7 @@
             <div class="highlights-item__main">
               <p class="highlights-item__main-text">Pressure</p>
               <img
-                class="highlights-item__main-icon"
+                class="highlights-item__main-icon icon"
                 src="@/assets/img/barometer.png"
                 alt="pressure"
               />
@@ -70,7 +70,7 @@
               <div class="highlights-item__sub-text-wrapper">
                 <p class="highlights-item__sub-text">21°C</p>
                 <div class="highlights-item__sub-text-sub-wrapper">
-                  <img src="@/assets/img/humidity.svg" alt="humidity" />
+                  <img src="@/assets/img/humidity.svg" alt="humidity" class="icon" />
                   <p class="highlights-item__sub-text__gray">How hot or cold it really feels</p>
                 </div>
               </div>
@@ -80,18 +80,18 @@
             <div class="highlights-item__main">
               <p class="highlights-item__main-text">Sunrise and sunset</p>
               <img
-                class="highlights-item__main-icon"
+                class="highlights-item__main-icon icon"
                 src="@/assets/img/sun-moving.png"
                 alt="sun-moving"
               />
               <div class="highlights-item__main-text-wrapper">
                 <div class="sun sunrise">
-                  <img class="sun__icon" src="@/assets/img/sun.svg" alt="sunrise" />
+                  <img class="sun__icon icon" src="@/assets/img/sun.svg" alt="sunrise" />
                   <p class="sun__text">Sunrise</p>
                   <p class="sun__time">7:31:42</p>
                 </div>
                 <div class="sun sunset">
-                  <img class="sun__icon" src="@/assets/img/sun.svg" alt="sunrise" />
+                  <img class="sun__icon icon" src="@/assets/img/sun.svg" alt="sunrise" />
                   <p class="sun__text">Sunset</p>
                   <p class="sun__time">18:34:19</p>
                 </div>
@@ -102,7 +102,7 @@
               <div class="highlights-item__sub-text-wrapper">
                 <p class="highlights-item__sub-text">80%</p>
                 <div class="highlights-item__sub-text-sub-wrapper">
-                  <img src="@/assets/img/cloud.svg" alt="cloud" />
+                  <img src="@/assets/img/cloud.svg" alt="cloud" class="icon" />
                   <p class="highlights-item__sub-text__gray">The sky fraction obscured by clouds</p>
                 </div>
               </div>
