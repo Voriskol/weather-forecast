@@ -1,148 +1,426 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap')
 
 * 
-    box-sizing: border-box
-    margin: 0
-    padding: 0
-    font-family: 'Work Sans', sans-serif
-    color: white
+  box-sizing: border-box
+  font-size: 16px
 
+html,
+body
+  margin: 0
+  padding: 0
+  font-family: 'Inter', Arial, sans-serif
+  font-size: 16px
+  line-height: 1.4
+  color: $white
 
-main
-    display: flex
-    flex-direction: column
-    justify-content: space-around
-    height: 100vh
-    background: #000
+a
+  font-size: inherit
+  line-height: inherit
+  color: inherit
 
-.upper-block,
-.bottom-block
-    display: flex
-    justify-content: space-around
+.container
+  max-width: 1200px
+  width: 100%
+  margin: 0 auto
+  padding: 0 3%
 
+.section
+  z-index: 2
+  position: relative
 
-.upper-block
-    height: 62vh
+.block-bottom
+  height: 100%
+  margin-left: 10px
+  padding: 28px 16px 16px
+  background: url('/src/assets/img/gradient-1.jpg') no-repeat 0% 0%
+  background-size: cover
+  border-radius: 25px
 
-.bottom-block
-    height: 35vh
-    
-.main-info,
-.highlights,
-.coordinates,
-.humidity
-    border-radius: 30px
-    padding: 20px
-.main-info
-    background-image: url('@/assets/img/gradient-1.jpg')
-    width: 30vw
-    display: flex
-    flex-direction: column
-
-.search-wrapper
-    display: flex
-
-.search
-    max-width: 20vw
-    width: 100%
-    max-height: 10vh
-    border-radius: 20px
-    border: none
-    background-color: #000
-
-.search__icon
-    width: 3vw
-    
-.weather-info
-.main-info__icon
-    padding: 3vh 0
-.icon
-    max-width: 10vw
-.temperature
-    font-size: 3em
-    padding-bottom: 3vh
-.weather-description
-    font-size: 1.5em
+  &-inner
     display: flex
     align-items: center
-    gap: 10px
-    border-bottom: 1px solid white
-    padding-bottom: 30px
-.weather-description__icon
-    max-width: 5vh
-.city-date
-    flex-direction: column
-    display: flex
-    justify-content: space-around
-    padding: 30px 0
+
+    @media (max-width: 575px)
+      flex-direction: column
+
+  &-pic
+    width: 15%
+    height: 70px
+    background-size: contain
+    background-repeat: no-repeat
+    border-radius: 16px
+
+    @media (max-width: 575px)
+      width: 30%
+      margin-right: 0
+
+  &-texts
+    width: 85%
+    padding-left: 20px
+
+    @media (max-width: 575px)
+      width: 100%
+      padding-top: 16px
+      padding-left: 0
+
+  &-text-block
     
+    &:first-child
+      padding-bottom: 12px
+
+    &-title
+      padding-bottom: 4px
+      font-size: 15px
+      font-weight: 700
+
+    &-desc
+      font-size: 13px
+      color: rgba($white, 0.75)
+
+.pic-humidity
+  background-image: url('/src/assets/img/humidity.png')
+
+.pic-coords
+  background-image: url('/src/assets/img/compass.png')
+
+
+
+.highlights
+  padding: 28px 16px 16px
+  background: url('/src/assets/img/gradient-4.jpg') no-repeat 0% 0%
+  background-size: cover
+  border-radius: 25px
+
+  &-wrapper
+    display: flex
+    justify-content: space-between
+
+    @media (max-width: 575px)
+      flex-direction: column
+
+.title
+  padding-bottom: 16px
+
+.highlight
+  width: 32%
+
+  @media (max-width: 575px)
+    width: 100%
+    margin-bottom: 16px
+
+.card
+  min-height: 230px
+  padding: 16px
+  background: url('/src/assets/img/gradient-2.jpg') no-repeat 50% 50%
+  background-size: cover
+  border-radius: 8px
+
+  @media (max-width: 1199px)
+    padding: 12px
+
+  &-centered
+    display: flex
+    justify-content: center
+    margin-top: 40px
+
+  &-justify
+    display: flex
+    justify-content: space-between
+    margin-top: 40px
+
+  &-title
+    padding-bottom: 12px
+    font-size: 13px
+
+    @media (max-width: 1199px)
+      font-size: 12px
+
+  &-pic
+    width: 100%
+    height: 90px
+    margin-bottom: 16px
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: contain
+
+    &--wind
+      background-image: url('/src/assets/img/equalizer (2).png')
+
+    &--pressure
+      background-image: url('/src/assets/img/barometer.png')
+
+    &--sun
+      background-image: url('/src/assets/img/sun-moving.png')
+
+
+.states
+  display: flex
+  justify-content: space-between
+
+  &--margin
+    margin-top: 40px
+
+.state
+  width: 40%
+
+  &:last-child
+    text-align: right
+
+  &-pic
+    width: 20px
+    height: 20px
+    margin-bottom: 6px
+    background: url('/src/assets/img/sun.svg') no-repeat 50% 50%
+    background-size: cover
+
+    &--flipped
+      margin-left: auto
+      -webkit-transform: scaleX(-1)
+      transform: scaleX(-1)
+
+  &-title
+    font-size: 12px
+    color: $gold
+
+  &-time
+    font-size: 13px
+    font-weight: 700
+
+    @media (max-width: 1199px)
+      font-size: 11px
+
+.info-main
+  display: flex
+  align-items: flex-end
+
+  &:last-child
+    text-align: right
+
+  &-num
+    font-size: 20px
+
+    @media (max-width: 1199px)
+      font-size: 18px
+
+  &-text
+    padding-left: 2px
+    padding-bottom: 3px
+    font-size: 13px
+    color: rgba($white, 0.75)
+
+    @media (max-width: 1199px)
+      padding-bottom: 1.5px
+      font-size: 12px
+      
+.card-small
+  margin-top: 12px
+  padding: 12px 16px
+  background: url('/src/assets/img/gradient-2.jpg') no-repeat 50% 50%
+  background-size: cover
+  border-radius: 8px
+
+  &-title
+    font-size: 13px
+
+  &-info
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    @media (max-width: 1199px)
+      flex-direction: column
+      align-items: flex-start
+
+  &-pic
+    width: 20px
+    height: 20px
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: contain
+
+    @media (max-width: 1199px)
+      display: none
+
+    &--margin
+      width: 16px
+      height: 16px
+      margin-bottom: 3px
+
+    &--wind
+      background-image: url('/src/assets/img/gusts.svg')
+
+    &--pressure
+      background-image: url('/src/assets/img/humidity.svg')
+
+    &--sun
+      background-image: url('/src/assets/img/cloud.svg')
+
+  &-data
+    display: flex
+    align-items: flex-end
+    width: 45%
+
+    @media (max-width: 1199px)
+      width: 100%
+      padding-top: 8px
+
+  &-hint
+    width: 55%
+
+    @media (max-width: 1199px)
+      width: 100%
+
+  &-text
+    font-size: 11px
+    line-height: 1.2
+    color: rgba($white, 0.6)
+
+    @media (max-width: 1199px)
+      min-height: 22px
+      font-size: 9px
+
+
+.pic-main
+  width: 60px
+  height: 60px
+  margin: 20px 0 12px
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  background-size: contain
 
 .city
-    font-size: 1.5em
-    display: flex
-    align-items: center
-.city__icon
-    max-width: 50px
+  font-size: 24px
+
+.weather
+  margin: 0 0 20px
+  padding: 20px 0
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4)
+
+.temp
+  padding-bottom: 8px
+  font-size: 32px
+
+.text-block
+  position: relative
+  padding-left: 24px
+  padding-bottom: 8px
+  font-size: 14px
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 20px
+    height: 20px
+    margin-right: 6px
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: contain
+
+.weather-desc
+
+  &::before
+    background-image: url('/src/assets/img/weather.svg')
+
+.city
+
+  &::before
+    background-image: url('/src/assets/img/location.svg')
+
 .date
-    font-size: 1.5em
-    display: flex
-    align-items: center
-    gap: 10px
-.date__icon
-    max-width: 50px
-.highlights
-    background-image: url('@/assets/img/gradient-2.jpg')
-    width: 68vw
-.highlights-wrapper
-    display: flex
-    align-items: center
-    justify-content: space-around
-    height: 100%
-.highlights-item
-    display: flex
+
+  &::before
+    left: 2px
+    width: 15px
+    height: 15px
+    background-image: url('/src/assets/img/calendar.svg')
+
+
+
+
+
+
+
+.page
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 100vh
+  padding: 20px 0
+  background-color: #59585d
+
+.laptop
+  width: 100%
+  padding: 20px
+  background-color: #0e100f
+  border-radius: 25px
+
+.sections
+  display: flex
+  width: 100%
+
+  @media (max-width: 767px)
     flex-direction: column
-    justify-content: space-between
-.highlights-item__main
-    flex-direction: column
-    display: flex
-    justify-content: space-between
-    align-items: center
-.highlights-item__main-text
-    font-size: 1.5em
-    padding: 20px 0
-.highlights-item__main-icon
-    max-width: 10vw
-.highlights-item__main-text-wrapper
-.highlights-item__sub
-.highlights-item__sub-icon
-    max-width: 30px
-.highlights-item__sub-text
-.highlights-item__sub-text-wrapper
-.highlights-item__sub-text-sub-wrapper
-.highlights-item__sub-text__gray
-.sun
-.sunrise
-.sun__icon
-    max-width: 3vw
-.sun__text
-.sun__time
-.sunset
-.bottom-block
-.coordinates
-    background-image: url('@/assets/img/gradient-3.jpg')
-    width: 49vw
-.coordinates-info
-.longitude
-.longitude-title
-.longitude-text
-.latitude
-.latitude-title
-.latitude-text
-.humidity
-    background-image: url('@/assets/img/gradient-4.jpg')
-    width: 49vw
-.humidity-info
-.humidity-title
-.humidity-text
+
+.section-left
+  width: 30%
+  padding-right: 10px
+
+  @media (max-width: 767px)
+    width: 100%
+    padding-right: 0
+
+.section-right
+  width: 70%
+  padding-left: 10px
+
+  @media (max-width: 767px)
+    width: 100%
+    margin-top: 16px
+    padding-left: 0
+
+.city-inner
+  position: relative
+  display: inline-block
+  width: 100%
+
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    right: 10px
+    width: 25px
+    height: 25px
+    background: url('./assets/img/search.svg') no-repeat 50% 50%
+    background-size: contain
+    transform: translateY(50%)
+    cursor: pointer
+
+.info
+  height: 100%
+  padding: 16px
+  background: url('./assets/img/gradient-1.jpg') no-repeat 50% 50%
+  background-size: cover
+  border-radius: 25px
+
+.search
+  width: 100%
+  padding: 16px
+  font-family: 'Inter', Arial, sans-serif
+  color: $white
+  background-color: rgba(0, 0, 0, 0.75)
+  border-radius: 16px
+  border: none
+  outline: none
+  cursor: pointer
+
+.section-bottom
+  width: 50%
+  margin-top: 16px
+
+  @media (max-width: 767px)
+    width: 100%
 
 
