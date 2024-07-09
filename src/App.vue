@@ -2,7 +2,11 @@
   <main>
     <section class="upper-block">
       <div class="main-info">
-        <input type="text" class="search" />
+        <div class="search-wrapper">
+          <input type="text" class="search" placeholder="Search for a city" />
+          <img src="@/assets/img/search.svg" alt="search" class="search__icon icon">
+        </div>
+
         <div class="weather-info">
           <img
             src="@/assets/img/weather-main/thunderstorm.png"
@@ -47,7 +51,7 @@
               <div class="highlights-item__sub-text-wrapper">
                 <p class="highlights-item__sub-text">14 m/s</p>
                 <div class="highlights-item__sub-text-sub-wrapper">
-                  <img src="@/assets/img/gusts.svg" alt="gusts" class="icon" />
+                  <img src="@/assets/img/gusts.svg" alt="gusts" class="icon highlights-item__sub-icon" />
                   <p class="highlights-item__sub-text__gray">Learn more about gusts</p>
                 </div>
               </div>
@@ -70,7 +74,7 @@
               <div class="highlights-item__sub-text-wrapper">
                 <p class="highlights-item__sub-text">21°C</p>
                 <div class="highlights-item__sub-text-sub-wrapper">
-                  <img src="@/assets/img/humidity.svg" alt="humidity" class="icon" />
+                  <img src="@/assets/img/humidity.svg" alt="humidity" class="icon highlights-item__sub-icon" />
                   <p class="highlights-item__sub-text__gray">How hot or cold it really feels</p>
                 </div>
               </div>
@@ -102,7 +106,7 @@
               <div class="highlights-item__sub-text-wrapper">
                 <p class="highlights-item__sub-text">80%</p>
                 <div class="highlights-item__sub-text-sub-wrapper">
-                  <img src="@/assets/img/cloud.svg" alt="cloud" class="icon" />
+                  <img src="@/assets/img/cloud.svg" alt="cloud" class="icon highlights-item__sub-icon" />
                   <p class="highlights-item__sub-text__gray">The sky fraction obscured by clouds</p>
                 </div>
               </div>

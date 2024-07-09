@@ -13,6 +13,7 @@ main
     flex-direction: column
     justify-content: space-around
     height: 100vh
+    background: #000
 
 .upper-block,
 .bottom-block
@@ -35,29 +36,86 @@ main
 .main-info
     background-image: url('@/assets/img/gradient-1.jpg')
     width: 30vw
-.search 
+    display: flex
+    flex-direction: column
+
+.search-wrapper
+    display: flex
+
+.search
+    max-width: 20vw
+    width: 100%
+    max-height: 10vh
+    border-radius: 20px
+    border: none
+    background-color: #000
+
+.search__icon
+    width: 3vw
+    
 .weather-info
 .main-info__icon
+    padding: 3vh 0
 .icon
-    max-width: 50px
+    max-width: 10vw
 .temperature
+    font-size: 3em
+    padding-bottom: 3vh
 .weather-description
+    font-size: 1.5em
+    display: flex
+    align-items: center
+    gap: 10px
+    border-bottom: 1px solid white
+    padding-bottom: 30px
 .weather-description__icon
+    max-width: 5vh
 .city-date
+    flex-direction: column
+    display: flex
+    justify-content: space-around
+    padding: 30px 0
+    
+
 .city
+    font-size: 1.5em
+    display: flex
+    align-items: center
 .city__icon
+    max-width: 50px
 .date
+    font-size: 1.5em
+    display: flex
+    align-items: center
+    gap: 10px
 .date__icon
+    max-width: 50px
 .highlights
     background-image: url('@/assets/img/gradient-2.jpg')
     width: 68vw
 .highlights-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-around
+    height: 100%
 .highlights-item
+    display: flex
+    flex-direction: column
+    justify-content: space-between
 .highlights-item__main
+    flex-direction: column
+    display: flex
+    justify-content: space-between
+    align-items: center
 .highlights-item__main-text
+    font-size: 1.5em
+    padding: 20px 0
 .highlights-item__main-icon
+    max-width: 10vw
 .highlights-item__main-text-wrapper
 .highlights-item__sub
+.highlights-item__sub-icon
+    max-width: 30px
 .highlights-item__sub-text
 .highlights-item__sub-text-wrapper
 .highlights-item__sub-text-sub-wrapper
@@ -65,6 +123,7 @@ main
 .sun
 .sunrise
 .sun__icon
+    max-width: 3vw
 .sun__text
 .sun__time
 .sunset
