@@ -1,5 +1,10 @@
 <script setup>
-
+defineProps({
+  weatherInfo: {
+    type: [Object, null],
+    required: true
+  }
+})
 </script>
 
 <template>
@@ -13,7 +18,8 @@
           <div class="card-info">
             <div class="card-justify">
               <div class="info-main">
-                <div class="info-main-num">3.6</div>
+                <div class="info-main-num"></div>
+
                 <div class="info-main-text">m/s</div>
               </div>
               <div class="info-main">

@@ -1,6 +1,6 @@
 <script setup>
 import { capitalize } from '@/utils'
-const props = defineProps({
+defineProps({
   weatherInfo: {
     type: [Object, null],
     required: true
@@ -18,18 +18,16 @@ const currentDate = new Date().toLocaleDateString('en-EN', {
 <template>
   <div v-if="weatherInfo.weather" class="summary">
     <div
-      :style="`background-image: url('/src/assets/img/weather-main/${props.weatherInfo?.weather[0].description}.png')`"
+      :style="`background-image: url('/src/assets/img/weather-main/${weatherInfo?.weather[0].description}.png')`"
       class="pic-main"
     ></div>
     <div class="weather">
-      <div class="temp">{{ props.weatherInfo?.main?.temp.toFixed(0) }}°C</div>
+      <div class="temp">{{ weatherInfo?.main?.temp.toFixed(0) }}°C</div>
       <div class="weather-desc text-block">
-        {{ capitalize(props.weatherInfo?.weather[0].description) }}
+        {{ capitalize(weatherInfo?.weather[0].description) }}
       </div>
     </div>
-    <div class="city text-block">
-      {{ props.weatherInfo?.name }}, {{ props.weatherInfo?.sys?.country }}
-    </div>
+    <div class="city text-block">{{ weatherInfo?.name }}, {{ weatherInfo?.sys?.country }}</div>
     <div class="date text-block">{{ currentDate }}</div>
   </div>
 

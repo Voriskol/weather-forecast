@@ -1,11 +1,13 @@
 <script setup>
 import WeatherSummary from './components/WeatherSummary.vue'
 import TheHighlights from './components/TheHighlights.vue'
+import TheCoords from './components/TheCoords.vue'
+import TheHumidity from './components/TheHumidity.vue'
 import { API_KEY, BASE_URL } from '@/constants/index.js'
 import { ref, onMounted } from 'vue'
 
 const city = ref('Cherepovets')
-const weatherInfo = ref({})
+const weatherInfo = ref([])
 
 function getWeather() {
   fetch(`${BASE_URL}?q=${city.value}&appid=${API_KEY}&units=metric`)
@@ -31,50 +33,15 @@ onMounted(getWeather)
               </div>
             </section>
             <section class="section section-right">
-              <TheHighlights />
+              <TheHighlights :weather-info="weatherInfo" />
             </section>
           </div>
-          <div class="sections">
+          <div v-if="weatherInfo.weather" class="sections">
             <section class="section-bottom">
-              <div class="block-bottom">
-                <div class="block-bottom-inner">
-                  <div class="block-bottom-pic pic-coords"></div>
-                  <div class="block-bottom-texts">
-                    <div class="block-bottom-text-block">
-                      <div class="block-bottom-text-block-title">Longitude: 2.3488</div>
-                      <div class="block-bottom-text-block-desc">
-                        Longitude measures distance east or west of the prime meridian.
-                      </div>
-                    </div>
-                    <div class="block-bottom-text-block">
-                      <div class="block-bottom-text-block-title">Latitude: 48.8534</div>
-                      <div class="block-bottom-text-block-desc">
-                        Latitude lines start at the equator (0 degrees latitude) and run east and
-                        west, parallel to the equator.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <TheCoords :coord="weatherInfo.coord" />
             </section>
             <section class="section-bottom">
-              <div class="block-bottom">
-                <div class="block-bottom-inner">
-                  <div class="block-bottom-pic pic-humidity"></div>
-                  <div class="block-bottom-texts">
-                    <div class="block-bottom-text-block">
-                      <div class="block-bottom-text-block-title">Humidity: 60 %</div>
-                      <div class="block-bottom-text-block-desc">
-                        Humidity is the concentration of water vapor present in the air. Water
-                        vapor, the gaseous state of water, is generally invisible to the human eye.
-                        <br /><br />
-                        The same amount of water vapor results in higher relative humidity in cool
-                        air than warm air.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <TheHumidity :humidity="weatherInfo.main.humidity" />
             </section>
           </div>
         </div>
