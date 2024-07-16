@@ -16,7 +16,7 @@ const currentDate = new Date().toLocaleDateString('en-EN', {
 </script>
 
 <template>
-  <div v-if="weatherInfo.weather" class="summary">
+  <div class="summary">
     <div
       :style="`background-image: url('/src/assets/img/weather-main/${weatherInfo?.weather[0].description}.png')`"
       class="pic-main"
@@ -29,10 +29,6 @@ const currentDate = new Date().toLocaleDateString('en-EN', {
     </div>
     <div class="city text-block">{{ weatherInfo?.name }}, {{ weatherInfo?.sys?.country }}</div>
     <div class="date text-block">{{ currentDate }}</div>
-  </div>
-
-  <div v-else class="summary">
-    <div>No data</div>
   </div>
 </template>
 
